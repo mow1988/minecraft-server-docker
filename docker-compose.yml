@@ -5,7 +5,7 @@ volumes:
 
 services:
   minecraft-server:
-   image: sebseib/minecraft-server:1.2
+   image: sebseib/minecraft-server:1.3
    restart: always
    volumes: 
     - minecraft-home:/opt/minecraft/home
