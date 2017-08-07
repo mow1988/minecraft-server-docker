@@ -1,0 +1,16 @@
+version: '2'
+
+volumes:
+ minecraft-home:
+
+services:
+  minecraft-server:
+   image: sebseib/minecraft-server:1.2
+   restart: always
+   volumes: 
+    - minecraft-home:/opt/minecraft/home
+   ports:
+    - 25565:25565
+   environment:
+    - MC_MEMORY_MAX=4096m
+    - MC_MEMORY_INIT=1024m
