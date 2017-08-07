@@ -13,6 +13,7 @@ RUN apt-get install -y  wget git
 RUN wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 RUN java -jar BuildTools.jar --rev 1.12.1
 
+#STEP2: Multistaged: copy builded jar file from STEP1
 FROM ubuntu:16.04
 RUN apt-get update
 RUN apt-get install -y openjdk-8-jre
